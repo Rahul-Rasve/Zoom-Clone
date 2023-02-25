@@ -2,6 +2,7 @@
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:zoom_clone/resources/auth_provider.dart';
 import 'package:zoom_clone/utilities/colors.dart';
 
 import 'screens/home_page.dart';
@@ -25,11 +26,24 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: backgroundColor,
       ),
-      home: LoginView(),
       routes: {
         '/loginView': (context) => LoginView(),
         '/home': (context) => HomePage(),
       },
+      home: StreamBuilder(
+        stream: AuthProvider().authChanges,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return Center(
+              child: CircularProgressIndicator(),
+            );
+          } else if (snapshot.hasData) {
+            return HomePage();
+          } else {
+            return LoginView();
+          }
+        },
+      ),
     );
   }
 }
