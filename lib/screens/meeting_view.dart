@@ -16,8 +16,13 @@ class MeetingView extends StatelessWidget {
     var random = Random();
     //generate 5 digit random number
     String roomCode = (random.nextInt(100000) + 100000).toString();
+    //adding 100000 to make it 5 digit, since random generates a num between 1 and 100000
     meetingProvider.createMeeting(
-        roomCode: roomCode, isAudioEnabled: true, isVideoEnabled: true);
+        roomCode: roomCode, isAudioDisabled: true, isVideoDisabled: true);
+  }
+
+  joinMeeting(BuildContext context) async {
+    Navigator.pushNamed(context, '/videoCall');
   }
 
   @override
@@ -33,7 +38,7 @@ class MeetingView extends StatelessWidget {
               text: 'New Meeting',
             ),
             HomePageButton(
-              onPressed: () {},
+              onPressed: () => joinMeeting(context),
               icon: Icons.add_box_rounded,
               text: 'Join Meeting',
             ),

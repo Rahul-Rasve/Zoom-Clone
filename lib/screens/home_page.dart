@@ -50,9 +50,9 @@ class _HomePageState extends State<HomePage> {
         items: [
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.chat,
+              Icons.video_chat,
             ),
-            label: 'Chat',
+            label: 'Meet',
           ),
           BottomNavigationBarItem(
             icon: Icon(
