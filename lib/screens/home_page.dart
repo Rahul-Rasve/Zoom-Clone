@@ -65,12 +65,6 @@ class _HomePageState extends State<HomePage> {
             ),
             label: 'Meetings',
           ),
-          // BottomNavigationBarItem(
-          //   icon: Icon(
-          //     Icons.person,
-          //   ),
-          //   label: 'Contacts',
-          // ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.logout_outlined,

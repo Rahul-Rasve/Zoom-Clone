@@ -5,7 +5,9 @@ import 'package:jitsi_meet/jitsi_meet.dart';
 import 'package:zoom_clone/resources/auth_provider.dart';
 import 'package:zoom_clone/resources/meeting_provider_jitsi.dart';
 import 'package:zoom_clone/utilities/colors.dart';
+import 'package:zoom_clone/widgets/input_field.dart';
 import 'package:zoom_clone/widgets/meeting_options.dart';
+import 'package:zoom_clone/widgets/round_button.dart';
 
 class VideoCallView extends StatefulWidget {
   const VideoCallView({super.key});
@@ -62,81 +64,49 @@ class _VideoCallViewState extends State<VideoCallView> {
           ),
         ),
       ),
-      body: Column(
-        children: [
-          SizedBox(
-            height: 60,
-            child: TextField(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            InputField(
               controller: meetingName,
-              maxLines: 1,
-              textAlign: TextAlign.center,
-              keyboardType: TextInputType.text,
-              decoration: InputDecoration(
-                fillColor: secondaryBackgroundColor,
-                filled: true,
-                hintText: 'Name',
-                contentPadding: EdgeInsets.only(top: 10.0),
-              ),
+              hintText: 'Name',
+              inputType: TextInputType.text,
             ),
-          ),
-          SizedBox(
-            height: 60.0,
-            child: TextField(
+            InputField(
               controller: meetingId,
-              maxLines: 1,
-              textAlign: TextAlign.center,
-              keyboardType: TextInputType.number,
-              decoration: InputDecoration(
-                fillColor: secondaryBackgroundColor,
-                filled: true,
-                hintText: 'Room ID',
-                contentPadding: EdgeInsets.only(top: 10.0),
-              ),
+              hintText: 'Room Code',
+              inputType: TextInputType.number,
             ),
-          ),
-          SizedBox(
-            height: 20.0,
-          ),
-          MeetingOptions(
-            settingName: 'Mute my Audio',
-            isMute: isAudioDisabled,
-            onChanged: (value) {
-              setState(() {
-                isAudioDisabled = value;
-              });
-            },
-          ),
-          MeetingOptions(
-            settingName: 'Turn off my Video',
-            isMute: isVideoDisabled,
-            onChanged: (value) {
-              setState(() {
-                isVideoDisabled = value;
-              });
-            },
-          ),
-          SizedBox(
-            height: 20.0,
-          ),
-          Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10.0),
-              color: buttonColor,
+            SizedBox(
+              height: 30.0,
             ),
-            child: InkWell(
-              onTap: joinMeeting,
-              child: Padding(
-                padding: EdgeInsets.all(15.0),
-                child: Text(
-                  'Join',
-                  style: TextStyle(
-                    fontSize: 20.0,
-                  ),
-                ),
-              ),
+            MeetingOptions(
+              settingName: 'Mute my Audio',
+              isMute: isAudioDisabled,
+              onChanged: (value) {
+                setState(() {
+                  isAudioDisabled = value;
+                });
+              },
             ),
-          ),
-        ],
+            MeetingOptions(
+              settingName: 'Turn off my Video',
+              isMute: isVideoDisabled,
+              onChanged: (value) {
+                setState(() {
+                  isVideoDisabled = value;
+                });
+              },
+            ),
+            SizedBox(
+              height: 30.0,
+            ),
+            RoundButton(
+              text: 'Join Meeting',
+              onPressed: joinMeeting,
+            )
+          ],
+        ),
       ),
     );
   }
