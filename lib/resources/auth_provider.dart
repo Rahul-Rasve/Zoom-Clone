@@ -47,4 +47,12 @@ class AuthProvider {
     }
     return result;
   }
+
+  void signOut() async {
+    try {
+      _auth.signOut();
+    } catch (e) {
+      e.toString();
+    }
+  }
 }

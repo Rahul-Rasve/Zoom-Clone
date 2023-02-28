@@ -1,9 +1,11 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:zoom_clone/resources/auth_provider.dart';
 import 'package:zoom_clone/screens/meeting_history_view.dart';
 import 'package:zoom_clone/screens/meeting_view.dart';
 import 'package:zoom_clone/utilities/colors.dart';
+import 'package:zoom_clone/widgets/round_button.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -24,8 +26,11 @@ class _HomePageState extends State<HomePage> {
   List<Widget> views = [
     MeetingView(),
     HistoryMeetingView(),
-    Text('Contacts'),
-    Text('Settings'),
+    // Text('Contacts'),
+    RoundButton(
+      text: 'Logout',
+      onPressed: () => AuthProvider().signOut(),
+    ),
   ];
 
   @override
@@ -60,17 +65,17 @@ class _HomePageState extends State<HomePage> {
             ),
             label: 'Meetings',
           ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(
+          //     Icons.person,
+          //   ),
+          //   label: 'Contacts',
+          // ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.person,
+              Icons.logout_outlined,
             ),
-            label: 'Contacts',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.settings,
-            ),
-            label: 'Settings',
+            label: 'Logout',
           ),
         ],
       ),

@@ -26,7 +26,9 @@ class HistoryMeetingView extends StatelessWidget {
               'Room Code: ${(snapshot.data! as dynamic).docs[index]['meetingName']}',
             ),
             subtitle: Text(
-              'Created on: ${DateFormat.yMMMd().format((snapshot.data! as dynamic).docs[index]['time'].toDate())}',
+              'Created on: ${DateFormat.yMMMd().format(
+                (snapshot.data! as dynamic).docs[index]['time'].toDate(),
+              )}',
             ),
           ),
         );

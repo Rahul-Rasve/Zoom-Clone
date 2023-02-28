@@ -42,16 +42,16 @@ class MeetingView extends StatelessWidget {
               icon: Icons.add_box_rounded,
               text: 'Join Meeting',
             ),
-            HomePageButton(
-              onPressed: () {},
-              icon: Icons.calendar_month_rounded,
-              text: 'Schedule',
-            ),
-            HomePageButton(
-              onPressed: () {},
-              icon: Icons.arrow_upward_rounded,
-              text: 'Share Screen',
-            ),
+            // HomePageButton(
+            //   onPressed: () {},
+            //   icon: Icons.calendar_month_rounded,
+            //   text: 'Schedule',
+            // ),
+            // HomePageButton(
+            //   onPressed: () {},
+            //   icon: Icons.arrow_upward_rounded,
+            //   text: 'Share Screen',
+            // ),
           ],
         ),
         Expanded(
