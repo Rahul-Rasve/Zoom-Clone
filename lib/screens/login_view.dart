@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_build_context_synchronously
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:zoom_clone/resources/auth_provider.dart';
 import 'package:zoom_clone/widgets/round_button.dart';
 
@@ -33,10 +35,16 @@ class _LoginViewState extends State<LoginView> {
           RoundButton(
             text: 'Sign In',
             onPressed: () async {
-              bool result = await authProvider.signInWithGoogle(context);
-              if (result) {
-                Navigator.pushNamedAndRemoveUntil(
-                    context, '/home', (route) => false);
+              try {
+                bool result = await authProvider.signInWithGoogle(context);
+                if (result) {
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, '/home', (route) => false);
+                }
+              } on FirebaseAuthException catch (_) {
+                Fluttertoast.showToast(
+                  msg: 'Some error occured!',
+                );
               }
             },
           ),

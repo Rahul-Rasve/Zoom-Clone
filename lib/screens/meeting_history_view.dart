@@ -16,6 +16,15 @@ class HistoryMeetingView extends StatelessWidget {
           return Center(
             child: CircularProgressIndicator(),
           );
+        } else if ((snapshot.data! as dynamic).docs.length == 0) {
+          return Center(
+            child: Text(
+              'No meetings attended',
+              style: TextStyle(
+                color: Colors.grey,
+              ),
+            ),
+          );
         }
 
         return ListView.builder(
