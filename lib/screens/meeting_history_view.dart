@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:zoom_clone/resources/firebase_provider.dart';
-import 'package:zoom_clone/utilities/colors.dart';
 
 class HistoryMeetingView extends StatelessWidget {
   const HistoryMeetingView({super.key});
