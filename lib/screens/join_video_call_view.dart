@@ -52,60 +52,62 @@ class _VideoCallViewState extends State<VideoCallView> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        elevation: 0,
-        backgroundColor: backgroundColor,
-        title: Text(
-          'Join a Meeting',
-          style: TextStyle(
-            fontSize: 20.0,
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          elevation: 0,
+          backgroundColor: backgroundColor,
+          title: Text(
+            'Join a Meeting',
+            style: TextStyle(
+              fontSize: 20.0,
+            ),
           ),
         ),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            InputField(
-              controller: meetingName,
-              hintText: 'Name',
-              inputType: TextInputType.text,
-            ),
-            InputField(
-              controller: meetingId,
-              hintText: 'Room Code',
-              inputType: TextInputType.number,
-            ),
-            SizedBox(
-              height: 30.0,
-            ),
-            MeetingOptions(
-              settingName: 'Mute my Audio',
-              isMute: isAudioDisabled,
-              onChanged: (value) {
-                setState(() {
-                  isAudioDisabled = value;
-                });
-              },
-            ),
-            MeetingOptions(
-              settingName: 'Turn off my Video',
-              isMute: isVideoDisabled,
-              onChanged: (value) {
-                setState(() {
-                  isVideoDisabled = value;
-                });
-              },
-            ),
-            SizedBox(
-              height: 30.0,
-            ),
-            RoundButton(
-              text: 'Join Meeting',
-              onPressed: joinMeeting,
-            )
-          ],
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              InputField(
+                controller: meetingName,
+                hintText: 'Name',
+                inputType: TextInputType.text,
+              ),
+              InputField(
+                controller: meetingId,
+                hintText: 'Room Code',
+                inputType: TextInputType.number,
+              ),
+              SizedBox(
+                height: 30.0,
+              ),
+              MeetingOptions(
+                settingName: 'Mute my Audio',
+                isMute: isAudioDisabled,
+                onChanged: (value) {
+                  setState(() {
+                    isAudioDisabled = value;
+                  });
+                },
+              ),
+              MeetingOptions(
+                settingName: 'Turn off my Video',
+                isMute: isVideoDisabled,
+                onChanged: (value) {
+                  setState(() {
+                    isVideoDisabled = value;
+                  });
+                },
+              ),
+              SizedBox(
+                height: 30.0,
+              ),
+              RoundButton(
+                text: 'Join Meeting',
+                onPressed: joinMeeting,
+              )
+            ],
+          ),
         ),
       ),
     );

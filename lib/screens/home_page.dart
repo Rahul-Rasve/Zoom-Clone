@@ -26,7 +26,6 @@ class _HomePageState extends State<HomePage> {
   List<Widget> views = [
     MeetingView(),
     HistoryMeetingView(),
-    // Text('Contacts'),
     RoundButton(
       text: 'Logout',
       onPressed: () => AuthProvider().signOut(),

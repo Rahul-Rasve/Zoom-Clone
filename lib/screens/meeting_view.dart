@@ -18,7 +18,10 @@ class MeetingView extends StatelessWidget {
     String roomCode = (random.nextInt(100000) + 100000).toString();
     //adding 100000 to make it 5 digit, since random generates a num between 1 and 100000
     meetingProvider.createMeeting(
-        roomCode: roomCode, isAudioDisabled: true, isVideoDisabled: true);
+      roomCode: roomCode,
+      isAudioDisabled: true,
+      isVideoDisabled: true,
+    );
   }
 
   joinMeeting(BuildContext context) async {
