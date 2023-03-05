@@ -1,16 +1,34 @@
-# zoom_clone
+# Zoom Clone
 
-A new Flutter project.
+Zoom Clone, one app for your group to come together and have a video chat.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<table>
+  <tr>
+    <tr>
+      <th scope="col">Sign In Page</th>
+      <th scope="col">Home Page</th>
+    </tr>
+    <tr>
+      <td scope="row"><img align="left" src="https://github.com/Rahul-Rasve/Zoom-Clone/blob/main/screenshots/signInPage.png"></td>
+      <td scope="row"><img align="right" src="https://github.com/Rahul-Rasve/Zoom-Clone/blob/main/screenshots/homePage.png"></td>
+    </tr>
+  </tr>
+  <tr>
+    <tr>
+      <th scope="col">Join Meeting Page</th>
+      <th scope="col">Meeting History Page</th>
+    </tr>
+    <tr>
+      <td scope="row"><img align="left" src="https://github.com/Rahul-Rasve/Zoom-Clone/blob/main/screenshots/joinMeetPage.png"></td>
+      <td scope="row"><img align="right" src="https://github.com/Rahul-Rasve/Zoom-Clone/blob/main/screenshots/meetingHistory.png"></td>
+    </tr>
+  </tr>
+  <tr>
+    <tr>
+      <th scope="col">Logout Page</th>
+    </tr>
+    <tr>
+      <td scope="row"><img align="left" src="https://github.com/Rahul-Rasve/Zoom-Clone/blob/main/screenshots/logoutPage.png"></td>
+    </tr>
+  </tr>
+</table>
