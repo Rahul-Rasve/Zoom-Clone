@@ -38,7 +38,7 @@ dependencies:
   firebase_auth: ^4.2.9
   firebase_core: ^2.7.0
   google_sign_in: ^6.0.1
-  jitsi_meet_fix: ^4.0.5  #for video calling
+  jitsi_meet: ^4.0.0  #for video calling
   intl: ^0.17.0  #for date formatting
   fluttertoast: ^8.2.1
 
