@@ -1,6 +1,6 @@
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:jitsi_meet/feature_flag/feature_flag.dart';
-import 'package:jitsi_meet/jitsi_meet.dart';
+import 'package:jitsi_meet_fix/feature_flag/feature_flag.dart';
+import 'package:jitsi_meet_fix/jitsi_meet.dart';
 import 'package:zoom_clone/resources/auth_provider.dart';
 import 'package:zoom_clone/resources/firebase_provider.dart';
 

@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:jitsi_meet/jitsi_meet.dart';
+import 'package:jitsi_meet_fix/jitsi_meet.dart';
 import 'package:zoom_clone/resources/auth_provider.dart';
 import 'package:zoom_clone/resources/meeting_provider_jitsi.dart';
 import 'package:zoom_clone/utilities/colors.dart';
