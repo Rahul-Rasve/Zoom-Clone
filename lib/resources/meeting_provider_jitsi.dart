@@ -16,6 +16,7 @@ class MeetingProvider {
   }) async {
     try {
       FeatureFlag featureFlag = FeatureFlag();
+      featureFlag.inviteEnabled = false;
       featureFlag.welcomePageEnabled = false;
       featureFlag.resolution = FeatureFlagVideoResolution
           .MD_RESOLUTION; // Limit video resolution to 360p
@@ -27,6 +28,7 @@ class MeetingProvider {
       }
       
       var options = JitsiMeetingOptions(room: roomCode)
+        ..userAvatarURL = provider.user.photoURL
         ..userDisplayName = name
         ..userEmail = provider.user.email
         ..userAvatarURL = provider.user.photoURL
