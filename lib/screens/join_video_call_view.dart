@@ -105,7 +105,7 @@ class _VideoCallViewState extends State<VideoCallView> {
               RoundButton(
                 text: 'Join Meeting',
                 onPressed: joinMeeting,
-              )
+              ),
             ],
           ),
         ),

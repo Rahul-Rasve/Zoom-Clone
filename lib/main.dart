@@ -24,7 +24,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Zoom Clone',
-      theme: ThemeData.dark().copyWith(
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        fontFamily: 'Nunito',
         scaffoldBackgroundColor: backgroundColor,
       ),
       routes: {

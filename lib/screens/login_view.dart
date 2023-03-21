@@ -22,7 +22,7 @@ class _LoginViewState extends State<LoginView> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            'Start or join a meeting',
+            'Sign In with Google',
             style: TextStyle(
               fontSize: 25,
               fontWeight: FontWeight.bold,
