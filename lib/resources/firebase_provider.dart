@@ -9,6 +9,7 @@ class FirebaseProvider {
       .collection('users')
       .doc(authProvider.currentUser?.uid)
       .collection('meetings')
+      .orderBy('time', descending: true)
       .snapshots();
 
   void addMeetingToFirebase(String meetingName) async {

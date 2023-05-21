@@ -26,7 +26,7 @@ class MeetingProvider {
       } else {
         name = userName;
       }
-      
+
       var options = JitsiMeetingOptions(room: roomCode)
         ..userAvatarURL = provider.user.photoURL
         ..userDisplayName = name

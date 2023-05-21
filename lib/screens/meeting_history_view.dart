@@ -19,7 +19,7 @@ class HistoryMeetingView extends StatelessWidget {
         } else if ((snapshot.data! as dynamic).docs.length == 0) {
           return Center(
             child: Text(
-              'No meetings attended',
+              'No meetings created/joined!',
               style: TextStyle(
                 color: Colors.grey,
               ),

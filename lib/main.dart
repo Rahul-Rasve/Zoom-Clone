@@ -9,7 +9,7 @@ import 'package:zoom_clone/utilities/colors.dart';
 import 'screens/home_page.dart';
 import 'screens/login_view.dart';
 
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(const MyApp());
